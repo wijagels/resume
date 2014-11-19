@@ -1,0 +1,67 @@
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\setlength{\textwidth}{5.1in} % set width of text portion
+
+\begin{document}
+
+% Center the name over the entire width of resume:
+\moveleft.5\hoffset\centerline{\large\bf William D. Jagels}
+% Draw a horizontal line the whole width of resume:
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+\moveleft.5\hoffset\centerline{126 Smith Ridge RD}
+\moveleft.5\hoffset\centerline{South Salem, NY 10590}
+\moveleft.5\hoffset\centerline{william@jagels.us  |  (657)-215-1939}
+\moveleft.5\hoffset\centerline{github.com/wijagels}
+
+
+\begin{resume}
+
+\section{OBJECTIVE}  A programming position
+
+
+\section{EDUCATION} {\sl Bachelor of Science,} Computer Science\\
+                    % \sl will be bold italic in New Century Schoolbook (or
+	             % any postscript font) and just slanted in
+		      	%	Computer Modern (default) font
+               Binghamton University, Binghamton, NY, 
+               expected May 2018
+               
+               \section{COMPUTER \\ SKILLS} {\sl Languages \& Software:} Java, Python, Git, Javascript, C++ \\
+               {\sl Operating Systems:} Linux, BSD, Windows
+               
+               \section{EXPERIENCE} {\sl Experience One} \hfill Fall 2014 \\
+               Name of place, 
+               Location of place 
+                 \begin{itemize}  \itemsep -2pt %reduce space between items
+                 \item Stuff I did.
+                 \item More stuff I did.
+                 \end{itemize}
+                 
+                 {\sl Experience Two} \hfill            Summer 2014 \\
+                 Nane of place, Location of place
+                 \begin{itemize}  \itemsep -2pt %reduce space between items
+                 \item Stuff I did.
+                 \end{itemize} 
+                 {\sl Experience Three} \hfill        Summer 2013 \\
+                 Name of place, Location of place
+                 \begin{itemize}
+                 \item Stuff I did.
+                 \end{itemize} 
+                 
+                 \section{COMMUNITY \\ SERVICE}
+			What I did.
+
+                 \section{EXTRA-CURRICULAR \\ ACTIVITIES}             
+                 Competitor in several hackathons
+                 
+
+                 \end{resume}
+                 \end{document}
+
+
+
+
