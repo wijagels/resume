@@ -1,67 +1,237 @@
-% LaTeX resume using res.cls
-\documentclass[margin]{res}
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
-\setlength{\textwidth}{5.1in} % set width of text portion
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
 
-\begin{document}
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
 
-% Center the name over the entire width of resume:
-\moveleft.5\hoffset\centerline{\large\bf William D. Jagels}
-% Draw a horizontal line the whole width of resume:
-\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
-% address begins here
-% Again, the address lines must be centered over entire width of resume:
-\moveleft.5\hoffset\centerline{126 Smith Ridge RD}
-\moveleft.5\hoffset\centerline{South Salem, NY 10590}
-\moveleft.5\hoffset\centerline{william@jagels.us  |  (657)-215-1939}
-\moveleft.5\hoffset\centerline{github.com/wijagels}
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+% Use roboto
+\usepackage{roboto}
+\sffamily
 
 
-\begin{resume}
-
-\section{OBJECTIVE}  A programming position in Machine Learning
-
-
-\section{EDUCATION} {\sl Bachelor of Science,} Computer Science\\
-                    % \sl will be bold italic in New Century Schoolbook (or
-	             % any postscript font) and just slanted in
-		      	%	Computer Modern (default) font
-               Binghamton University, Binghamton, NY, 
-               expected May 2018
-               
-               \section{COMPUTER \\ SKILLS} {\sl Languages \& Software:} Java, Python, Git, Javascript, C++ \\
-               {\sl Operating Systems:} Linux, BSD, Windows
-               
-               \section{EXPERIENCE} {\sl Experience One} \hfill Fall 2014 \\
-               Name of place, 
-               Location of place 
-                 \begin{itemize}  \itemsep -2pt %reduce space between items
-                 \item Stuff I did.
-                 \item More stuff I did.
-                 \end{itemize}
-                 
-                 {\sl Experience Two} \hfill            Summer 2014 \\
-                 Nane of place, Location of place
-                 \begin{itemize}  \itemsep -2pt %reduce space between items
-                 \item Stuff I did.
-                 \end{itemize} 
-                 {\sl Experience Three} \hfill        Summer 2013 \\
-                 Name of place, Location of place
-                 \begin{itemize}
-                 \item Stuff I did.
-                 \end{itemize} 
-                 
-                 \section{COMMUNITY \\ SERVICE}
-			What I did.
-
-                 \section{EXTRA-CURRICULAR \\ ACTIVITIES}             
-                 Competitor in several hackathons
-                 
-
-                 \end{resume}
-                 \end{document}
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
 
 
+% title on top of the document
+\maintitle{William Jagels}{June 15, 1996}{Last update on \today}
+
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:william@jagels.us}{william\mbox{}@\mbox{}jagels.us}\sbull
+\textsmaller{+}1 657-215-1939\sbull
+\href{https://github.com/wijagels}{github.com/wijagels}\sbull
+\href{https://www.linkedin.com/in/williamjagels}{linkedin.com/in/williamjagels}
+\\
 
 
+\spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Experience}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.hoppinger.com}{Hoppinger}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Head of Technology}
+    {Apr \apo12 -- present}
+    {\bodytext{Hoppinger is an open source minded ``full-service'' internet agency.  Reporting directly to the general director, Marijn Bom. In charge of drawing and carrying out the vision for the tech department consisting of 15 developers.  Streamlined datacenter operations with Puppet, introduced Rails for custom web-app development and Capistrano for deployment automation.  Intimately involved with the software architecture of all technically challenging projects.}}
+}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\href{http://www.hro.nl}{HRO} (Rotterdam University of Applied Science)}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Guest Lecturer}
+    {Sep \apo12 -- present}
+    {\bodytext{Introductory lecture on history of software development and open source for 1\textsuperscript{st} year CS students.}}
+}
+
+\headedsection
+  {\href{http://www.intellecap.com}{Intellecap}/\href{http://istpl.in}{\acr{ISTPL}}}
+  {\textsc{Mumbai, Pune \& Hyderabad, India}} {%
+
+  \headedsubsection
+    {\acr{IT} Consultant}
+    {Nov \apo08 -- Feb \apo09}
+    {\bodytext{Intellecap is a social-sector advisory firm serving corporates, non-profits, development agencies and governments working in developing markets. Assessed their software development team and methodologies, trained their developers and build several web applications.  One of those apps is \href{http://www.mostfit.org}{Mostfit}, an open source \acr{MIS} for \href{http://en.wikipedia.org/wiki/Microcredit}{microcredit} lenders.}}
+
+  \headedsubsection
+    {\acr{IT} \& Strategy Consultant}
+    {Jan \apo10 -- Aug \apo11}
+    {\bodytext{Called in to solve several technical challenges and look at potential growth strategies for \href{http://www.mostfit.org}{Mostfit}.}}
+
+  \headedsubsection
+    {CTO}
+    {Oct \apo11 -- Feb \apo12}
+    {\bodytext{Proudly joined the \acr{C}-family of Intellicap's software division, ISTPL, to make \href{http://www.mostfit.org}{Mostfit} the nr.1 software solution for micro credit lenders around the globe.  Contracts got terminated half a year later due to investment issues.}}
+}
+
+\headedsection
+  {\href{http://www.zarafa.com}{Zarafa}}
+  {\textsc{Delft, The Netherlands}} {%
+  \headedsubsection
+    {\acr{QA} \& Release Manager}
+    {Dec \apo09 -- Jan \apo11}
+    {\bodytext{Zarafa might be the fastest growing open source product company in Europe, making a drop-in replacement for MS Exchange.  Reported directly to the \acr{CEO}, Brian Josef, and worked closely with the \acr{CTO}, Steve Hardy.  In charge of the 6 men strong QA department.  Established test automation and continuous integration.  Architected and implemented an all-integrated documentation and translation system that employed community effort.  Got sent to India to analyse and streamline their outsourced operations.}}
+}
+
+\headedsection
+  {\href{http://www.dharmapublishing.com}{Dharma Publishing}}
+  {\textsc{near San Francisco (\acr{CA}), \acr{USA}}} {%
+  \headedsubsection
+    {\acr{IT} Consultant}
+    {Nov \apo09 -- Dec \apo09}
+    {\bodytext{Dharma Publishing, the worlds largest Buddhist publisher, is a non-profit, all-volunteer organisation that helps to preserve Tibetan Buddhism and culture. Built their \href{http://www.dharmapublishing.com}{web shop}, and moved their digital content sales to SaaS applications.}}
+}
+
+\headedsection
+  {\href{http://www.kde.org}{KDE}}
+  {\href{http://edu.kde.org/kturtle}{edu.kde.org/kturtle}} {%
+  \headedsubsection
+    {Software Engineer}
+    {Dec \apo03 -- present}
+    {\bodytext{\acr{KT}urtle is an educational programming environment that simplifies learning the basics of programming.  \acr{KT}urtle is intended as a gift to future generations:\ a simple environment to get started with programming.  In 2003 \acr{KT}urtle got admitted to the \acr{KDE} project.}}
+}
+
+\headedsection
+  {\href{http://truetopiaproject.org}{Truetopia Project}}
+  {\href{http://truetopiaproject.org}{truetopiaproject.org}} {%
+  \headedsubsection
+    {Initiator}
+    {Nov \apo07 -- Apr \apo10}
+    {\bodytext{The Truetopia Project is an open source web application (Rails) to facilitate self-governing communities.  It provides a workflow for collaborative problem identification and solution design.}}
+}
+
+\headedsection
+  {\href{http://www.dpu.ac.th/dpuic}{Dhurakij Pundit University International College}}
+  {\textsc{Bangkok, Thailand}} {%
+  \headedsubsection
+    {Guest Lecturer}
+    {Sep \apo09}
+    {\bodytext{Invited by Dr.\@ Pilun Piyasirivej and Mr.\@ Michel Bauwens for two guest lectures:\ the open source movement and the semantic web.}}
+}
+
+\headedsection
+  {\href{http://www.opendream.th}{Opendream}}
+  {\textsc{Bangkok, Thailand}} {%
+  \headedsubsection
+    {\acr{IT} Consultant}
+    {Aug \apo09 -- Sep \apo09}
+    {\bodytext{Architected and largely implemented an open source media sharing web service (\acr{REST} api) that facilitates video uploads, transcoding and streaming.  Coached their development team on system design, Ruby development (using Merb/Rails) and testing strategies such as \acr{TDD}/\acr{BDD}.}}
+}
+
+\headedsection
+  {\href{http://www.commuun.nl}{Commuun}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Senior Visionary}
+    {Jul \apo06 -- Sep \apo09}
+    {\bodytext{Set up the technical infrastructure, defined the core competences and created a brand together with Peter Duijnstee (the proprietor of Commuun).  Then collaborated on several web applications (all Rails apps) within the context of his company.}}
+}
+
+\headedsection
+  {\href{http://www.eur.nl}{Erasmus University Rotterdam}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Guest Lecturer}
+    {Jul \apo06 -- Jul \apo09}
+    {\bodytext{Conducted a guest lecture on the phenomenon of open source, as part of the first year curriculum of \emph{Computer Science \& Economics}.}}
+}
+
+%\headedsection
+%  {LIP Automatisering}
+%  {\textsc{Breda, The Netherlands}} {%
+%  \headedsubsection
+%    {Software Auditor}
+%    {Sep \apo06}
+%    {\bodytext{Audited their flag ship product \emph{\acr{LIP} Suite}:\ an %\acr{ERP} solution for construction companies.}}
+%}
+
+\headedsection
+  {\href{http://www.thehealthagency.com}{The Health Agency}}
+  {\textsc{Delft \& Rotterdam, The Netherlands}} {%
+
+  \headedsubsection
+    {Software Engineer}
+    {Jun \apo05 -- Feb \apo06}
+    {\bodytext{Worked on their CMS (written in Python and uses Postgre\acr{SQL}, \acr{XML}/\acr{XSLT} and Twisted).}}
+
+  \headedsubsection
+    {Software Auditor}
+    {Dec \apo06}
+    {\bodytext{Assessed their Python/Zope/\acr{Z}o\acr{DB}-based web framework re-engineering project.}}
+}
+
+\vspace{-0.2em}
+\begin{center}
+  \emph{\small Please refer to my \href{http://www.linkedin.com/in/ciesbreijs}{Linked-in profile} for a more complete list of work experiences along with recommendations.}
+\end{center}
+
+
+\spacedhrule{-0.2em}{-0.4em}
+
+\roottitle{Education}
+
+\headedsection
+  {\href{http://www.eur.nl/english}{Erasmus University Rotterdam}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Bachelor degree in Computer Science \& Economics}
+    {2004 -- 2007}
+    {\bodytext{Focused on the economics of open source, rapid application development (\acr{RAD}) and the semantic web technology stack (\acr{RDF}/\acr{RDFS}, \acr{OWL} and \acr{SPARQL}).  Picked up quite some Java skills along the way.}}
+}
+
+\headedsection
+  {\href{http://www.tudelft.nl/en}{Technical University Delft}}
+  {\textsc{Delft, The Netherlands}} {%
+  \headedsubsection
+    {Industrial Design Engineering \textnormal{\textit{~(discontinued)}}}
+    {2001 -- 2002} {}
+}
+
+\headedsection
+  {\href{http://www.libanonlyceum.nl}{Libanon Lyceum}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {\acr{VWO} \textnormal{~(pre-university secondary education)}}
+    {1994 -- 2000} {}
+}
+
+
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Skills}
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Technical expertise:}
+  {Software design and implementation, with(in) a team.  Big fan of Agile methodologies (Scrum and Kanban), automated deployment (Capistrano) and continuous integration (Hudson/Jenkins).  Enjoys writing Ruby/\nsp Python/\nsp Java/\nsp \CPP, yet flirts regularly with Haskell.  Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mostly Angular and jQuery).  Linux administration skills:\ Bash, Apache, My\acr{SQL}, Postgres\acr{SQL}, virtualization/cloud (Vagrant, Open\acr{VZ}, \acr{VM}ware, \acr{KVM}, Xen and \acr{EC}2), datacenter automation (Puppet and Chef).}
+
+\vspace{0.5em}
+\inlineheadsection
+  {Natural languages:}
+  {Dutch \emph{(mother tongue)}, English \emph{(full professional proficiency)}, German \emph{(limited working proficiency)}, French \emph{(elementary proficiency)} and Mandarin Chinese \emph{(beginner)}.}
+
+
+\spacedhrule{1.6em}{-0.4em}
+
+\roottitle{Interests}
+
+\inlineheadsection
+  {Non-exhaustive and in alphabetical order:}
+  {art, Buddhism, cryptography, Go (board game), history, music, open source, philosophy, software engineering (methodologies), travel, typography (e.g.\ graphic design, \LaTeX), \acr{UI}/\acr{UX}-design and vegetarian/vegan cooking.}
+
+
+\end{document}
