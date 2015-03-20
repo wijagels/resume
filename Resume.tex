@@ -13,7 +13,9 @@
 
 % Use roboto
 %\sffamily
-%\usepackage[sfdefault]{roboto}
+%\usepackage[default]{droidserif}
+%\usepackage[T1]{fontenc}
+
 
 %enable multi column
 \usepackage{multicol}
@@ -42,11 +44,9 @@
 \href{https://www.linkedin.com/in/williamjagels}{linkedin.com/in/williamjagels}
 
 
-
-
 \roottitle{Education}
 
-\spacedhrule{0.1em}{0.4em}  % a horizontal line with some vertical spacing before and after
+\spacedhrule{0.1em}{0.9em}  % a horizontal line with some vertical spacing before and after
 
 \headedsection
   {\href{http://www.binghamton.edu/index.php}{Binghamton University, State University of New York}}
@@ -54,7 +54,14 @@
   \headedsubsection
     {BS Computer Science}
     {Expected 2018}
-    {}
+    {\bodytext
+  {
+    \begin{itemize}
+      \item HackBU Programming Club
+      \item Association for Computing Machinery Projects Division
+    \end{itemize}
+  }
+    }
 }
 
 \headedsection
@@ -63,85 +70,103 @@
   \headedsubsection
     {New York State Regents Diploma}
     {June 2014}
-    {}
+    {\bodytext
+  {
+    \begin{itemize}
+      \item Engineering Club
+      \item Technical Theater
+    \end{itemize}
+  }
+    }
 }
+
+\roottitle{Skills \& Interests}
+
+\spacedhrule{0.1em}{0.9em}  % a horizontal line with some vertical spacing before and after
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Development Expertise:}
+  {  I'm experienced in Node.js and Express with MongoDB.  I use python frequently for automation and web scraping tasks.  I have strong knowledge of \acr{HTML+CSS} and JavaScript.  I'm also experienced in Java for object oriented programming.}
+
+
+\inlineheadsection
+  {Technical Expertise:}
+  {I'm very comfortable in a Linux/BSD shell.  I'm also knowledgeable in network architecture and internet protocols.}
+
+\inlineheadsection
+  {Things I'm passionate about:}
+  {Hackathons, Prime numbers, \LaTeX, Cryptography, Bitcoin, Physics, Data Mining.}
+
+\roottitle{Projects}
+
+\spacedhrule{0.1em}{0.9em}  % a horizontal line with some vertical spacing before and after
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Internbox:}
+  { Internship finding service targeted at high school and college.  Using Node.js, Express, and Jade to develop a dynamic site with user logins.  Using MongoDB to store information about users and their preferences to try and tailor emails to what they want. }
+
+\inlineheadsection
+	{Never Leave Terminal:}
+	{ A collection of shell scripts to let users stay in their terminal, but still be able to browse services like Etsy.  Images are displayed with image to ASCII.  Leveraged several APIs to allow the user to perform a variety of actions without having to leave the shell. }
+
+\inlineheadsection
+  {QueryIt:}
+  { Hackathon project built at PennApps with a team of three others.  API simplification engine using Node.js and NaturalNode for natural language processing.  The engine turns a plain english string into an API call that is returned to the requester. }
+
+\vspace{0.5em}
 
 \roottitle{Experience}
 
-\spacedhrule{0.1em}{0.4em}  % a horizontal line with some vertical spacing before and after
+\spacedhrule{0.1em}{0.9em}  % a horizontal line with some vertical spacing before and after
 
-\vspace{0.5em}
+
 \headedsection  % sets the header for the section and includes any subsections
   {\href{http://hg.ccsd.ws/}{Horace Greeley High School}}
   {\textsc{Chappaqua, New York}} {
   \headedsubsection
     {Independent Project}
     {May 2014 -- June 2014}
-    {\bodytext{In lieu of classes at the end of my senior year, I took on a project to teach myself more about real world development.  I researched under the guidance of a Senior Technical Staff Member at IBM.  I learned about scheduling and development strategies such as agile development.}}
+    {\bodytext{
+  \begin{itemize}
+    \item Designed a proposal for an independent project
+    \item Mentored by an IBM Senior Technical Staff member
+    \item Researched development strategies and web technologies
+  \end{itemize}
+    }}
 }
 
-\vspace{0.5em}
 \headedsection  % sets the header for the section and includes any subsections
   {\href{http://hg.ccsd.ws/}{Horace Greeley High School}}
   {\textsc{Chappaqua, New York}} {
   \headedsubsection
     {Teaching Assistant}
     {September 2013 -- June 2014}
-    {\bodytext{Having excelled in the upper-level class, I was asked to assist in the intro to robotics and java course.  The first semester was designing and programming robots running BASIC.  The second semester was \acr{HTML+CSS} and java.  This experience greatly improved my debugging skills.}}
+    {\bodytext{
+  \begin{itemize}
+    \item Taught \acr{BASIC} and robot design first semester
+    \item Designed challenges for the robots
+    \item Taught Java object oriented programming second semester
+  \end{itemize}
+    }}
 }
 
-\vspace{0.5em}
 \headedsection  % sets the header for the section and includes any subsections
   {\href{https://lifeworx.com/}{LifeWorx}}
   {\textsc{Chappaqua, New York}} {
   \headedsubsection
     {Technology Intern}
     {April 2013 -- June 2013}
-    {\bodytext{I worked on the company Wiki to provide an easy to navigate training manual and protocol documentation.  I learned about how businesses operate internally during this internship.}}
+    {\bodytext{
+    \begin{itemize}
+      \item Restructured the company's internal Wiki
+      \item Learned about internal operations of a business
+      \item Worked with Office Suite
+    \end{itemize}
+  }
+    }
 }
 
 
-
-\roottitle{Hackathons Attended}
-
-\spacedhrule{0.1em}{0.4em}  % a horizontal line with some vertical spacing before and after
-
-{\setlength\multicolsep{0pt}%
-\begin{multicols}{2}
-\begin{description}[topsep=0pt]
-  \setlength{\itemindent}{-0.15in}
-  \item[Coding For A Cause] Binghamton, NY  \emph{11/1/14}
-  \item [HackRPI] Troy, NY  \emph{11/15/14}
-  \item [HackDay] Binghamton, NY  \emph{12/6/14}
-  \item [PennApps] Philadelphia, PA \emph{1/16/15}
-  \item [VTHacks] Blacksburg, VA \emph{2/6/15}
-  \item [HackDFW] Dallas, TX \emph{2/28/15}
-  \item [HackNY] New York, NY \emph{3/7/15}
-\end{description}
-\end{multicols}
-
-\vspace{-0.2em}
-\begin{center}
-  \emph{\small* Please take a look at my \href{https://github.com/wijagels}{Github profile} for a record of hackathon and personal project contributions.}
-\end{center}
-
-\roottitle{Skills \& Interests}
-
-\spacedhrule{0.1em}{0.4em}  % a horizontal line with some vertical spacing before and after
-
-\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
-  {Development Expertise:}
-  {I attend as many hackathons as I can and enjoy working in small teams.  I'm experienced in Node.js and Express with MongoDB.  I use python frequently for automation and web scraping tasks.  I have strong knowledge of \acr{HTML+CSS} and JavaScript.  I'm also experienced in Java object oriented programming.}
-
-
-\inlineheadsection
-  {Technical Expertise:}
-  {Due to self-teaching, I've become very comfortable in the Linux/BSD command line.  I'm knowledgeable in network architecture and internet protocols.}
-
-\vspace{0.5em}
-\inlineheadsection
-  {Things I'm passionate about:}
-  {Hackathons, Prime numbers, \LaTeX, Cryptography, Bitcoin, Physics, Data collection, analysis, and visualization.}
 
 
 \end{document}
