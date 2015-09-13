@@ -3,3 +3,5 @@
 *.pdf
 *.out
 *.aux
+*.fls
+*.fdb_latexmk

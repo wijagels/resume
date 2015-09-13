@@ -17,12 +17,14 @@
 %\usepackage[T1]{fontenc}
 
 
-%enable multi column
+% Enable multi column
 \usepackage{multicol}
 
-%to kill the spaces in lists
+% To kill the spaces in lists
 \usepackage{enumitem}
 
+% No space before multi colk
+\setlength\multicolsep{0pt}
 
 \begin{document}  % begin the content of the document
 \sloppy  % this to relax whitespacing in favour of straight margins
@@ -49,25 +51,31 @@
 \spacedhrule{0.1em}{0.9em}  % a horizontal line with some vertical spacing before and after
 
 \headedsection
-  {\href{http://www.binghamton.edu/index.php}{Binghamton University, State University of New York}}
-  {\textsc{Binghamton, New York}} {
-  \headedsubsection
-    {BS Computer Science - \acr{GPA} 3.08}
-    {Expected 2018}
-    {\bodytext
-  {
-    \begin{itemize}
-      \item HackBU Programming Club
-      \item Association for Computing Machinery Projects Division
-    \end{itemize}
-    Relevant coursework
-    \begin{itemize}
-	\item Programming With Objects
-	\item Computer Systems I: Machine Organization
-	\item Calculus I \& II
-    \end{itemize}
-  }
-    }
+{\href{http://www.binghamton.edu/index.php}{Binghamton University, State University of New York}}
+{\textsc{Binghamton, New York}} {
+	\headedsubsection
+	{BS Computer Science - \acr{GPA} 3.08}
+	{Expected 2018}
+	{\bodytext
+		{
+			\begin{itemize}
+				\item HackBU Programming Club
+				\item Association for Computing Machinery Projects Division
+			\end{itemize}
+		}
+	}
+	\headedsubsection {Relevant coursework}{}{
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item Programming With Objects
+				\item Computer Systems I: Machine Organization
+				\item Computer Systems II: Arch and Programming
+				\item Data Structures and Algorithms
+				\item Calculus I \& II
+				\item Linear Algebra
+			\end{itemize}
+		\end{multicols}
+	}
 }
 
 
@@ -77,16 +85,16 @@
 
 \inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
   {Development Expertise:}
-  {  I'm experienced in Node.js and Express with MongoDB.  I use python frequently for automation and web scraping tasks.  I have strong knowledge of \acr{HTML+CSS} and JavaScript.  I'm also experienced in Java for object oriented programming.}
+  { Proficient in Node/Javascript, Python, Java.  Familiar with Ruby, C++, C.}
 
 
 \inlineheadsection
   {Technical Expertise:}
-  {I'm very comfortable in a Linux/BSD shell.  I'm also knowledgeable in network architecture and internet protocols.}
+  { Experienced in GNU/Linux administration and shell scripting. }
 
 \inlineheadsection
   {Things I'm passionate about:}
-  {Hackathons, Prime numbers, \LaTeX, Cryptography, Bitcoin, Physics, Data Mining.}
+  {Hackathons, \LaTeX, Cryptography, Bitcoin, \acr{FOSS}, Data Mining.}
 
 \roottitle{Projects}
 
@@ -110,6 +118,23 @@
 
 \spacedhrule{0.1em}{0.9em}  % a horizontal line with some vertical spacing before and after
 
+
+\headedsection  % sets the header for the section and includes any subsections
+{\href{http://www.hudson-trading.com/}{Hudson River Trading}}
+{\textsc{New York, New York}} {
+	\headedsubsection
+	{Data Center Operations Intern}
+	{June 2015 -- August 2015}
+	{
+		\bodytext{
+			\begin{itemize}
+				\item Diagnosed and repaired hundreds of servers, significantly increasing computing capacity
+				\item Performed independent research on server power consumption
+				\item Engineered a testing environment providing automated Linux installations and a suite of testing utilities
+			\end{itemize}
+		}
+	}
+}
 
 \headedsection  % sets the header for the section and includes any subsections
   {\href{http://hg.ccsd.ws/}{Horace Greeley High School}}
@@ -141,21 +166,6 @@
     }}
 }
 
-\headedsection  % sets the header for the section and includes any subsections
-  {\href{https://lifeworx.com/}{LifeWorx}}
-  {\textsc{Chappaqua, New York}} {
-  \headedsubsection
-    {Technology Intern}
-    {April 2013 -- June 2013}
-    {\bodytext{
-    \begin{itemize}
-      \item Restructured the company's internal Wiki
-      \item Learned about internal operations of a business
-      \item Worked with Office Suite
-    \end{itemize}
-  }
-    }
-}
 
 
 
