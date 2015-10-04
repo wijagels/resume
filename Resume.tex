@@ -31,7 +31,7 @@
 
 
 % title on top of the document
-\maintitle{William Jagels}{}{Built on \today}
+\maintitle{William Jagels}{}{}
 
 \nobreakvspace{0.3em}  % add some page break averse vertical spacing
 
@@ -53,29 +53,15 @@
 \headedsection
 {\href{http://www.binghamton.edu/index.php}{Binghamton University, State University of New York}}
 {\textsc{Binghamton, New York}} {
-	\headedsubsection
-	{BS Computer Science - \acr{GPA} 3.08}
-	{Expected 2018}
-	{\bodytext
-		{
-			\begin{itemize}
-				\item HackBU Programming Club
-				\item Association for Computing Machinery Projects Division
-			\end{itemize}
-		}
-	}
-	\headedsubsection {Relevant coursework}{}{
-		\begin{multicols}{2}
-			\begin{itemize}
-				\item Programming With Objects
-				\item Computer Systems I: Machine Organization
-				\item Computer Systems II: Arch and Programming
-				\item Data Structures and Algorithms
-				\item Calculus I \& II
-				\item Linear Algebra
-			\end{itemize}
-		\end{multicols}
-	}
+    \headedsubsection
+    {BS Computer Science - \acr{GPA} 3.08}
+    {Expected 2018}
+    {	
+        \begin{itemize}
+            \item HackBU Programming Club
+            \item Association for Computing Machinery Projects Division
+        \end{itemize}
+    }
 }
 
 
@@ -84,17 +70,17 @@
 \spacedhrule{0.1em}{0.9em}  % a horizontal line with some vertical spacing before and after
 
 \inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
-  {Programming languages:}
-  {Experienced in Node.js, Python, C/C++, and Java. Familiar with Bash.}
+{Programming languages:}
+{ Node.js, Python, C/C++, Java, and Bash.}
 
 
 \inlineheadsection
-  {Technical Knowledge:}
-  { I've worked with AWS, Google Cloud Platform, and unmanaged Linux severs.  I frequently use MongoDB for side projects. }
+{Technical Knowledge:}
+{ Amazon Web Services, Google Cloud Platform, MongoDB, \& unmanaged Linux severs. }
 
 \inlineheadsection
-  {Things I'm passionate about:}
-  {Hackathons, \LaTeX, Bitcoin, and Open Source.}
+{Things I'm passionate about:}
+{Hackathons, \LaTeX, Bitcoin, and Open Source.}
 
 
 \vspace{0.5em}
@@ -107,40 +93,62 @@
 \headedsection  % sets the header for the section and includes any subsections
 {\href{http://www.hudson-trading.com/}{Hudson River Trading}}
 {\textsc{New York, New York}} {
-	\headedsubsection
-	{Data Center Operations Intern}
-	{June 2015 -- August 2015}
-	{
-		\bodytext{
-			\begin{itemize}
-				\item Diagnosed and repaired hundreds of servers, significantly increasing computing capacity
-				\item Performed research on server power consumption that helped quantify efficiency improvements
-				\item Engineered a testing environment providing automated installations and a suite of testing utilities used to isolate hardware problems
-                \item Learned about system architecture/programming and network design
-			\end{itemize}
-		}
-	}
+    \headedsubsection
+    {Data Center Operations Intern}
+    {June 2015 -- August 2015}
+    {
+        \begin{itemize}
+            \item Diagnosed and repaired hundreds of servers, significantly increasing computing capacity
+            \item Performed research on server power consumption that helped quantify efficiency improvements
+            \item Engineered a testing environment providing automated installations and a suite of testing utilities used to isolate hardware problems
+            \item Learned about system architecture/programming and network design
+        \end{itemize}
+    }
 }
 
 \roottitle{Projects}
 
 \spacedhrule{0.1em}{0.9em}  % a horizontal line with some vertical spacing before and after
 
-\inlineheadsection
-  {Uber Quiz:}
-  { Mobile game built at BigRed Hacks with android and node.js.  A trivia game is played while in an Uber to determine what share of the ride each player has to pay for.  Used AWS DynamoDB for storing data and Elastic Beanstalk to run a scalable Node.js backend.  Currently in the process of transitioning to Google App Engine.  Overall 3rd place winner at BigRed Hacks '15. }
+\headedsubsection
+{Uber Quiz:}{}
+{
+    \begin{itemize}[leftmargin=0.5in]
+        \item{Mobile game built at BigRed Hacks with Android and node.js}
+        \item{Used AWS DynamoDB for storing data and Elastic Beanstalk to run a scalable Node.js backend}
+        \item{Overall 3rd place winner at BigRed Hacks '15}
+    \end{itemize}
+}
 
-\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
-  {Fox Pay/Wallet:}
-  { A cloud integrated bitcoin wallet with a focus on following design guidelines and good UX design.  Currently works on android with a node.js backend to handle transactions and real time bitcoin data.  Developed customized graphs for a visualization of historical bitcoin pricing. }
+\headedsubsection % special section that has an inline header with a 'hanging' paragraph
+{Fox Pay/Wallet:}{}
+{
+    \begin{itemize}[leftmargin=0.5in]
+        \item{A cloud integrated bitcoin wallet with a focus on following design guidelines and good UX design}
+        \item{Works on Android with a node.js backend to handle transactions and real time bitcoin data}
+        \item{Developed customized graphs for a visualization of historical bitcoin pricing}
+    \end{itemize}
+}
 
-\inlineheadsection
-  {Friendwagon}
-  { A social network of carpoolers that enables drivers to connect with riders going to a similar destination.  Leveraged the Twilio API to create a proxy for rider to driver communication via text messages.  Gained experience with AWS EC2 and mongodb.  Winner of best use of AWS at BrickHack 2015. }
+\headedsubsection
+{Friendwagon:}{}
+{
+    \begin{itemize}[leftmargin=0.5in]
+        \item{Social network of carpoolers that enables drivers to connect with riders going to a similar destination}
+        \item{Built with AWS EC2, Node.js, and MongoDB}
+        \item{Winner of best use of AWS at BrickHack 2015}
+    \end{itemize}
+}
 
-\inlineheadsection
-	{Never Leave Terminal:}
-	{ A compilation of javascript modules to let users stay in their terminal, but still be able to browse services like Etsy.  Gained experience in using APIs and asynchronous HTTP requests.  Winner of most APIs used at HackNY Spring '15. }
+\headedsubsection
+{Never Leave Terminal:}{}
+{
+    \begin{itemize}[leftmargin=0.5in]
+        \item{A compilation of javascript modules to let users stay in their terminal, but still be able to browse services like Etsy}
+        \item{Gained experience in using APIs and asynchronous HTTP requests}
+        \item{Winner of most APIs used at HackNY Spring '15}
+    \end{itemize}
+}
 
 % \headedsection  % sets the header for the section and includes any subsections
 %   {\href{http://hg.ccsd.ws/}{Horace Greeley High School}}
