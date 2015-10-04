@@ -12,9 +12,9 @@
 \usepackage{resume}
 
 % Use roboto
-%\sffamily
-%\usepackage[default]{droidserif}
-%\usepackage[T1]{fontenc}
+%\normalfont
+%\usepackage[urw-garamond]{mathdesign}
+\usepackage[T1]{fontenc}
 
 
 % Enable multi column
@@ -31,7 +31,7 @@
 
 
 % title on top of the document
-\maintitle{William D. Jagels}{}{Built on \today}
+\maintitle{William Jagels}{}{Built on \today}
 
 \nobreakvspace{0.3em}  % add some page break averse vertical spacing
 
@@ -40,10 +40,10 @@
 % \sbull is a spaced bullet
 % \href well..
 % \\ breaks the line into a new paragraph
-\noindent\href{mailto:william@jagels.us}{william\mbox{}@\mbox{}jagels.us}\sbull
-\textsmaller{+}1 657-215-1939\sbull
+\noindent\href{mailto:william@jagels.us}{william@jagels.us}\sbull
 \href{https://github.com/wijagels}{github.com/wijagels}\sbull
-\href{https://www.linkedin.com/in/williamjagels}{linkedin.com/in/williamjagels}
+\href{https://www.linkedin.com/in/williamjagels}{linkedin.com/in/williamjagels}\sbull
+\textsmaller{+}1 657-215-1939
 
 
 \roottitle{Education}
@@ -84,33 +84,18 @@
 \spacedhrule{0.1em}{0.9em}  % a horizontal line with some vertical spacing before and after
 
 \inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
-  {Development Expertise:}
-  { Proficient in Node/Javascript, Python, Java.  Familiar with Ruby, C++, C.}
+  {Programming languages:}
+  {Experienced in Node.js, Python, C/C++, and Java. Familiar with Bash.}
 
 
 \inlineheadsection
-  {Technical Expertise:}
-  { Experienced in GNU/Linux administration and shell scripting. }
+  {Technical Knowledge:}
+  { I've worked with AWS, Google Cloud Platform, and unmanaged Linux severs.  I frequently use MongoDB for side projects. }
 
 \inlineheadsection
   {Things I'm passionate about:}
-  {Hackathons, \LaTeX, Cryptography, Bitcoin, \acr{FOSS}, Data Mining.}
+  {Hackathons, \LaTeX, Bitcoin, and Open Source.}
 
-\roottitle{Projects}
-
-\spacedhrule{0.1em}{0.9em}  % a horizontal line with some vertical spacing before and after
-
-\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
-  {Internbox:}
-  { Internship finding service targeted at high school and college.  Using Node.js, Express, and Jade to develop a dynamic site with user logins.  Using MongoDB to store information about users and their preferences to try and tailor emails to what they want. }
-
-\inlineheadsection
-	{Never Leave Terminal:}
-	{ A collection of shell scripts to let users stay in their terminal, but still be able to browse services like Etsy.  Images are displayed with image to ASCII.  Leveraged several APIs to allow the user to perform a variety of actions without having to leave the shell. }
-
-\inlineheadsection
-  {QueryIt:}
-  { Hackathon project built at PennApps with a team of three others.  API simplification engine using Node.js and NaturalNode for natural language processing.  The engine turns a plain english string into an API call that is returned to the requester. }
 
 \vspace{0.5em}
 
@@ -129,42 +114,63 @@
 		\bodytext{
 			\begin{itemize}
 				\item Diagnosed and repaired hundreds of servers, significantly increasing computing capacity
-				\item Performed independent research on server power consumption
-				\item Engineered a testing environment providing automated Linux installations and a suite of testing utilities
+				\item Performed research on server power consumption that helped quantify efficiency improvements
+				\item Engineered a testing environment providing automated installations and a suite of testing utilities used to isolate hardware problems
+                \item Learned about system architecture/programming and network design
 			\end{itemize}
 		}
 	}
 }
 
-\headedsection  % sets the header for the section and includes any subsections
-  {\href{http://hg.ccsd.ws/}{Horace Greeley High School}}
-  {\textsc{Chappaqua, New York}} {
-  \headedsubsection
-    {Independent Project}
-    {May 2014 -- June 2014}
-    {\bodytext{
-  \begin{itemize}
-    \item Designed a proposal for an independent project
-    \item Mentored by an IBM Senior Technical Staff member
-    \item Researched development strategies and web technologies
-  \end{itemize}
-    }}
-}
+\roottitle{Projects}
 
-\headedsection  % sets the header for the section and includes any subsections
-  {\href{http://hg.ccsd.ws/}{Horace Greeley High School}}
-  {\textsc{Chappaqua, New York}} {
-  \headedsubsection
-    {Teaching Assistant}
-    {September 2013 -- June 2014}
-    {\bodytext{
-  \begin{itemize}
-    \item Taught \acr{BASIC} and robot design first semester
-    \item Designed challenges for the robots
-    \item Taught Java object oriented programming second semester
-  \end{itemize}
-    }}
-}
+\spacedhrule{0.1em}{0.9em}  % a horizontal line with some vertical spacing before and after
+
+\inlineheadsection
+  {Uber Quiz:}
+  { Mobile game built at BigRed Hacks with android and node.js.  A trivia game is played while in an Uber to determine what share of the ride each player has to pay for.  Used AWS DynamoDB for storing data and Elastic Beanstalk to run a scalable Node.js backend.  Currently in the process of transitioning to Google App Engine.  Overall 3rd place winner at BigRed Hacks '15. }
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Fox Pay/Wallet:}
+  { A cloud integrated bitcoin wallet with a focus on following design guidelines and good UX design.  Currently works on android with a node.js backend to handle transactions and real time bitcoin data.  Developed customized graphs for a visualization of historical bitcoin pricing. }
+
+\inlineheadsection
+  {Friendwagon}
+  { A social network of carpoolers that enables drivers to connect with riders going to a similar destination.  Leveraged the Twilio API to create a proxy for rider to driver communication via text messages.  Gained experience with AWS EC2 and mongodb.  Winner of best use of AWS at BrickHack 2015. }
+
+\inlineheadsection
+	{Never Leave Terminal:}
+	{ A compilation of javascript modules to let users stay in their terminal, but still be able to browse services like Etsy.  Gained experience in using APIs and asynchronous HTTP requests.  Winner of most APIs used at HackNY Spring '15. }
+
+% \headedsection  % sets the header for the section and includes any subsections
+%   {\href{http://hg.ccsd.ws/}{Horace Greeley High School}}
+%   {\textsc{Chappaqua, New York}} {
+%   \headedsubsection
+%     {Independent Project}
+%     {May 2014 -- June 2014}
+%     {\bodytext{
+%   \begin{itemize}
+%     \item Designed a proposal for an independent project
+%     \item Mentored by an IBM Senior Technical Staff member
+%     \item Researched development strategies and web technologies
+%   \end{itemize}
+%     }}
+% }
+
+% \headedsection  % sets the header for the section and includes any subsections
+%   {\href{http://hg.ccsd.ws/}{Horace Greeley High School}}
+%   {\textsc{Chappaqua, New York}} {
+%   \headedsubsection
+%     {Teaching Assistant}
+%     {September 2013 -- June 2014}
+%     {\bodytext{
+%   \begin{itemize}
+%     \item Taught \acr{BASIC} and robot design first semester
+%     \item Designed challenges for the robots
+%     \item Taught Java object oriented programming second semester
+%   \end{itemize}
+%     }}
+% }
 
 
 
